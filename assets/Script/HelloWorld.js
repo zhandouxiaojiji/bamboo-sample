@@ -13,7 +13,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         this.label.string = this.text;
-        console.log("&&&&&&&&&&&&&&helloworld");
+        console.log("helloworld");
     },
 
     // called every frame

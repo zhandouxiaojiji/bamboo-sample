@@ -10,7 +10,7 @@
   "encryptJs": true,
   "excludeScenes": [],
   "fb-instant-games": {},
-  "includeSDKBox": false,
+  "includeSDKBox": true,
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
   "md5Cache": false,
@@ -22,7 +22,7 @@
     "portrait": false,
     "upsideDown": false
   },
-  "packageName": "org.cocos2d.helloworld",
+  "packageName": "org.bamboo.helloworld",
   "qqplay": {
     "REMOTE_SERVER_ROOT": "",
     "orientation": "portrait",
