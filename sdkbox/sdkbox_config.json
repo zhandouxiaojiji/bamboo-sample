@@ -104,28 +104,19 @@
             "ads": {
                 "gameover": {
                     "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/1092476511"
+                    "id": "ca-app-pub-2860793830396779/5401626103"
                 }, 
                 "home": {
                     "width": 300, 
                     "type": "banner", 
-                    "id": "ca-app-pub-1329374026572143/2685130917", 
+                    "id": "ca-app-pub-2860793830396779/3158606140", 
                     "alignment": "bottom", 
                     "height": 100
                 }, 
                 "rewarded": {
                     "type": "rewarded_video", 
-                    "id": "ca-app-pub-1329374026572143/8251968111"
+                    "id": "ca-app-pub-2860793830396779/9312950959"
                 }, 
-                "top_banner": {
-                    "type": "banner", 
-                    "id": "ca-app-pub-1329374026572143/3087700911", 
-                    "alignment": "top"
-                }, 
-                "next_level": {
-                    "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/4564434111"
-                }
             }
         }, 
         "Appodeal": {
@@ -247,28 +238,19 @@
             "ads": {
                 "gameover": {
                     "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/4185543717"
+                    "id": "ca-app-pub-2860793830396779/5401626103"
                 }, 
                 "home": {
                     "width": 300, 
                     "type": "banner", 
-                    "id": "ca-app-pub-3940256099942544/2934735716", 
+                    "id": "ca-app-pub-2860793830396779/3158606140", 
                     "alignment": "bottom", 
                     "height": 50
                 }, 
                 "rewarded": {
                     "type": "rewarded_video", 
-                    "id": "ca-app-pub-1329374026572143/7991602916"
+                    "id": "ca-app-pub-2860793830396779/9312950959"
                 }, 
-                "top_banner": {
-                    "type": "banner", 
-                    "id": "ca-app-pub-1329374026572143/6690628914", 
-                    "alignment": "top"
-                }, 
-                "next_level": {
-                    "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/9390403312"
-                }
             }
         }, 
         "Appodeal": {
