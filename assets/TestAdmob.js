@@ -75,6 +75,27 @@ cc.Class({
         }
     },
 
+    cacheBanner: function() {
+        console.log("cacheBanner");
+        if(cc.sys.isMobile) {
+            sdkbox.PluginAdMob.cache('home');
+        }
+    },
+
+    showBanner: function() {
+        console.log("showBanner");
+        if(cc.sys.isMobile) {
+            sdkbox.PluginAdMob.show('home');
+        }
+    },
+
+    showRewarded: function() {
+        console.log("showRewarded");
+        if(cc.sys.isMobile) {
+            sdkbox.PluginAdMob.show('rewarded');
+        }
+    },
+
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {},
