@@ -63,8 +63,8 @@ cc.Class({
     },
 
     cacheInterstitial: function() {
-        console.log("cacheInterstitial");
         if(cc.sys.isMobile) {
+            console.log("cacheInterstitial");
             sdkbox.PluginAdMob.cache('gameover');
         }
     },
