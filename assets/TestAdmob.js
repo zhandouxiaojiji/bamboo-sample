@@ -7,7 +7,7 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
+var bb = require("bb");
 cc.Class({
     extends: cc.Component,
 
@@ -31,7 +31,8 @@ cc.Class({
 
     onLoad: function () {
         //Add this line to onLoad
-        this.admobInit();
+        //this.admobInit();
+        bb.Admob.init();
     },
 
     admobInit: function() {
