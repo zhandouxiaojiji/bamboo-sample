@@ -31,70 +31,34 @@ cc.Class({
 
     onLoad: function () {
         //Add this line to onLoad
-        //this.admobInit();
         bb.Admob.init();
     },
 
-    admobInit: function() {
-        if(cc.sys.isMobile) {
-            var self = this
-            sdkbox.PluginAdMob.setListener({
-                adViewDidReceiveAd: function(name) {
-                    console.log('adViewDidReceiveAd name=' + name);
-                },
-                adViewDidFailToReceiveAdWithError: function(name, msg) {
-                    console.log('adViewDidFailToReceiveAdWithError name=' + name + ' msg=' + msg);
-                },
-                adViewWillPresentScreen: function(name) {
-                    console.log('adViewWillPresentScreen name=' + name);
-                },
-                adViewDidDismissScreen: function(name) {
-                    console.log('adViewDidDismissScreen name=' + name);
-                },
-                adViewWillDismissScreen: function(name) {
-                    console.log('adViewWillDismissScreen=' + name);
-                },
-                adViewWillLeaveApplication: function(name) {
-                    console.log('adViewWillLeaveApplication=' + name);
-                }
-            });
-            sdkbox.PluginAdMob.init();
-        }
-    },
-
     cacheInterstitial: function() {
-        if(cc.sys.isMobile) {
-            console.log("cacheInterstitial");
-            sdkbox.PluginAdMob.cache('gameover');
-        }
+        console.log("cacheInterstitial");
+        bb.Admob.cache('gameover');
     },
 
     showInterstitial: function() {
         console.log("showInterstitial");
-        if(cc.sys.isMobile) {
-            sdkbox.PluginAdMob.show('gameover');
-        }
+        bb.Admob.show('gameover');
     },
 
     cacheBanner: function() {
         console.log("cacheBanner");
-        if(cc.sys.isMobile) {
-            sdkbox.PluginAdMob.cache('home');
-        }
+        bb.Admob.cace('home');
     },
 
     showBanner: function() {
         console.log("showBanner");
-        if(cc.sys.isMobile) {
-            sdkbox.PluginAdMob.show('home');
-        }
+        bb.Admob.show('home');
     },
 
     showRewarded: function() {
         console.log("showRewarded");
-        if(cc.sys.isMobile) {
-            sdkbox.PluginAdMob.show('rewarded');
-        }
+        bb.Admob.reward('rewarded', function(currency, amount){
+            console.log('test reward:'+currency+','+amount);
+        });
     },
 
     // LIFE-CYCLE CALLBACKS:
