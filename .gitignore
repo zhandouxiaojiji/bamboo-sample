@@ -1,5 +1,9 @@
 local/
-build/
 library/
 temp/
 
+build/jsb-link/frameworks/runtime-src/proj.ios_mac/GoogleMobileAds.framework/
+build/jsb-link/frameworks/runtime-src/proj.ios_mac/PluginAdMob.framework/
+build/jsb-link/frameworks/runtime-src/proj.ios_mac/PluginSdkboxAds.framework/
+build/jsb-link/frameworks/runtime-src/proj.ios_mac/sdkbox.framework/
+build/jsb-link/frameworks/runtime-src/proj.ios_mac/Test.xcodeproj/

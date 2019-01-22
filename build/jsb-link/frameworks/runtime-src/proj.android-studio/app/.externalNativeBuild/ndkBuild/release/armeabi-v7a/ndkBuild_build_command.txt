@@ -1,0 +1,21 @@
+Executable : E:\Android\android-ndk-r15c\ndk-build.cmd
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=E:\code\bamboo-sample\build\jsb-link\frameworks\runtime-src\proj.android-studio\app\jni\Android.mk
+NDK_APPLICATION_MK=E:\code\bamboo-sample\build\jsb-link\frameworks\runtime-src\proj.android-studio\app\jni\Application.mk
+APP_ABI=armeabi-v7a
+NDK_ALL_ABIS=armeabi-v7a
+NDK_DEBUG=0
+APP_PLATFORM=android-16
+NDK_OUT=E:/code/bamboo-sample/build/jsb-link/frameworks/runtime-src/proj.android-studio/app/build/intermediates/ndkBuild/release/obj
+NDK_LIBS_OUT=E:\code\bamboo-sample\build\jsb-link\frameworks\runtime-src\proj.android-studio\app\build\intermediates\ndkBuild\release\lib
+NDK_TOOLCHAIN_VERSION=4.9
+NDK_MODULE_PATH=D:\CocosCreator\resources\cocos2d-x;D:\CocosCreator\resources\cocos2d-x\cocos;D:\CocosCreator\resources\cocos2d-x\external
+-j8
+NDK_DEBUG=0
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-B
+-n
+jvmArgs : 
+
