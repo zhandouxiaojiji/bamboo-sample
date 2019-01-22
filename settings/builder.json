@@ -27,14 +27,14 @@
     "portrait": false,
     "upsideDown": false
   },
-  "packageName": "org.cocos2d.Test",
+  "packageName": "org.bamboo.sample",
   "privateKey": "",
   "qqplay": {
     "REMOTE_SERVER_ROOT": "",
     "orientation": "portrait"
   },
   "startScene": "7751f4c2-d56f-4df9-aa8c-e24d98676356",
-  "title": "Test",
+  "title": "Sample",
   "webOrientation": "auto",
   "wechatgame": {
     "REMOTE_SERVER_ROOT": "",
