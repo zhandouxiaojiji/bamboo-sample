@@ -8,7 +8,7 @@ if (!window.i18n.languages) {
     window.i18n.languages = {};
 }
 
-window.i18n.languages['zh'] = {
+window.i18n.languages['zh-cn'] = {
     // write your key value pairs here
     hello: "你好！",
     hideInterstitial: "隐藏全屏",

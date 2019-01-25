@@ -68,8 +68,7 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        const i18n = require('LanguageData');
-        i18n.init('zh-hk');
+        bb.initLanguage();
     },
 
     start () {
