@@ -1,3 +1,8 @@
 {
-  "languages": []
+  "default_language": "zh",
+  "languages": [
+    "en",
+    "zh",
+    "zh-tw"
+  ]
 }

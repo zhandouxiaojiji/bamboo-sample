@@ -12,6 +12,10 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        label: {
+            default: null,
+            type: cc.Label
+        }
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -34,8 +38,8 @@ cc.Class({
         bb.Admob.init();
     },
 
-    cacheInterstitial: function() {
-        console.log("cacheInterstitial");
+    hideInterstitial: function() {
+        console.log("hideInterstitial");
         bb.Admob.cache('gameover');
     },
 
@@ -44,8 +48,8 @@ cc.Class({
         bb.Admob.show('gameover');
     },
 
-    cacheBanner: function() {
-        console.log("cacheBanner");
+    hideBanner: function() {
+        console.log("hideBanner");
         bb.Admob.cace('home');
     },
 
@@ -63,10 +67,13 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad () {
+        const i18n = require('LanguageData');
+        i18n.init('zh-hk');
+    },
 
     start () {
-
+        this.label.string = cc.sys.languageCode;
     },
 
     // update (dt) {},
