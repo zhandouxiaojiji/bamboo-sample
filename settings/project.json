@@ -4,8 +4,8 @@
       true
     ]
   ],
-  "design-resolution-height": 640,
-  "design-resolution-width": 960,
+  "design-resolution-height": 1280,
+  "design-resolution-width": 720,
   "excluded-modules": [],
   "facebook": {
     "appID": "",
@@ -28,8 +28,7 @@
     "height": 640,
     "width": 960
   },
-  "start-scene": "current",
-  "use-customize-simulator": false,
+  "use-customize-simulator": true,
   "use-project-simulator-setting": false,
   "assets-sort-type": "name"
 }
