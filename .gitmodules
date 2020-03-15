@@ -1,3 +1,3 @@
 [submodule "assets/bamboo"]
 	path = assets/bamboo
-	url = https://github.com/zhandouxiaojiji/bamboo.git
+	url = git@github.com:zhandouxiaojiji/bamboo-sample.git 
