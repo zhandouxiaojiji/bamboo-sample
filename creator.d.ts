@@ -1,4 +1,4 @@
-
+declare var wx;
 /** !#en
 The main namespace of Cocos2d-JS, all engine core classes, functions, properties and constants are defined in this namespace.
 !#zh
