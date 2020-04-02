@@ -180,7 +180,7 @@
       "array": [
         0,
         0,
-        220.83647796503186,
+        367.19477120460203,
         0,
         0,
         0,
@@ -2342,8 +2342,11 @@
       "__id__": 2
     },
     "_enabled": true,
-    "consoleNode": {
+    "consoleBtn": {
       "__id__": 38
+    },
+    "consoleViewPrefab": {
+      "__uuid__": "ed58be57-c80a-4c72-bd01-c05529394515"
     },
     "_id": "9a3wEfP6lExoMuTfr0iaOX"
   },

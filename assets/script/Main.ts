@@ -1,6 +1,6 @@
 import def from "./Def/def";
 import prop from "./Def/prop";
-import Language from "../bamboo/Language";
+import Language from "../bamboo/Service/Language";
 import Network from "../bamboo/Service/Network";
 import Wechat from "../bamboo/Wechat/Wechat";
 import ConsoleService from "../bamboo/Console/ConsoleService";
@@ -12,7 +12,10 @@ const {ccclass, property} = cc._decorator;
 export default class NewClass extends cc.Component {
 
     @property(cc.Node)
-    consoleNode: cc.Node;
+    consoleBtn: cc.Node;
+
+    @property(cc.Prefab)
+    consoleViewPrefab: cc.Prefab;
 
     onLoad () {
         Language.init(prop.language);
@@ -45,7 +48,7 @@ export default class NewClass extends cc.Component {
                     showConsole = true;
                 }
             }
-            this.consoleNode.active = showConsole;
+            this.consoleBtn.active = showConsole;
             if(Network.authorization) {
                 bb.notify(`登录凭证:${Network.authorization}`)
             }
@@ -57,6 +60,6 @@ export default class NewClass extends cc.Component {
     }
 
     onClickConsole() {
-
+        bb.open(this.consoleViewPrefab);
     }
 }
