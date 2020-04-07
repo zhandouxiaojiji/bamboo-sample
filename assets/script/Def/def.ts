@@ -28,7 +28,7 @@ if (cc.sys.platform == cc.sys.WECHAT_GAME) {
 }
 
 export default {
-  APPNAME: "CHICKEN8",
+  APPNAME: "SAMPLE",
   TestAccounts: {
     "oHuVr5fLlyaIXIqIe2SIvKWiJmgs": true,
     "ocQYG5lOk7zYKnUZpLzz1day8DcU": true,
@@ -47,5 +47,5 @@ export default {
   Wechat: {
     appId: 'xxx'
   },
-  
+  ScoreName: "HIGH_SOCRE",
 }

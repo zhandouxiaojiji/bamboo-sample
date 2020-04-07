@@ -17,6 +17,9 @@ export default class NewClass extends cc.Component {
     @property(cc.Prefab)
     consoleViewPrefab: cc.Prefab;
 
+    @property(cc.Prefab)
+    rankViewPrefab: cc.Prefab;
+
     onLoad () {
         Language.init(prop.language);
     }
@@ -56,7 +59,7 @@ export default class NewClass extends cc.Component {
     }
 
     onClickRank() {
-
+        bb.open(this.rankViewPrefab);
     }
 
     onClickConsole() {

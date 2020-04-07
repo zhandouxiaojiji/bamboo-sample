@@ -180,7 +180,7 @@
       "array": [
         0,
         0,
-        367.19477120460203,
+        359.2616944900503,
         0,
         0,
         0,
@@ -2347,6 +2347,9 @@
     },
     "consoleViewPrefab": {
       "__uuid__": "ed58be57-c80a-4c72-bd01-c05529394515"
+    },
+    "rankViewPrefab": {
+      "__uuid__": "938cbf9c-0176-498b-8a9b-4ef5c89aa7ea"
     },
     "_id": "9a3wEfP6lExoMuTfr0iaOX"
   },
