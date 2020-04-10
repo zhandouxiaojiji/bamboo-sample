@@ -48,4 +48,5 @@ export default {
     appId: 'xxx'
   },
   ScoreName: "HIGH_SOCRE",
+  MAX_RANK_COUNT: 50,
 }

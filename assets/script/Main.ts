@@ -5,6 +5,7 @@ import Network from "../bamboo/Service/Network";
 import Wechat from "../bamboo/Wechat/Wechat";
 import ConsoleService from "../bamboo/Console/ConsoleService";
 import bb from "../bamboo/bb";
+import Rank from "../bamboo/Service/Rank";
 
 const {ccclass, property} = cc._decorator;
 
@@ -35,6 +36,21 @@ export default class NewClass extends cc.Component {
         });
         ConsoleService.addCustom("切换到测试服", () => {
             Network.setHost(def.HttpHost.DEV);
+        });
+        ConsoleService.addCustom("提交分数", () => {
+            (async () => {
+                let resp = await Network.setKV(def.ScoreName, String(888), def.APPNAME);
+                console.log("set kv", resp);
+                let userInfo = await Network.getUserInfo();
+                if (userInfo) {
+                    await Rank.submitScore(def.APPNAME, def.ScoreName, {
+                        nickName: userInfo.nickName,
+                        avatarUrl: userInfo.avatarUrl,
+                        score: 888,
+                    });
+                    console.log("submit score done");
+                }
+            })();
         });
     }
 

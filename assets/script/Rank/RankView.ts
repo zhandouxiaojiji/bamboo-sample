@@ -17,6 +17,7 @@ export default class RankView extends cc.Component {
         this.node.on(cc.Node.EventType.TOUCH_END, () => {
             this.node.removeFromParent();
         });
+        this.preload(def.MAX_RANK_COUNT);
         this.showRank();
     }
 
@@ -37,6 +38,7 @@ export default class RankView extends cc.Component {
             if (!itemList) {
                 return;
             }
+            console.log(itemList);
             itemList.forEach((item) => {
                 item.node.active = false;
             });
