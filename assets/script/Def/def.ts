@@ -35,8 +35,8 @@ export default {
   },
   TestAccount: "test",
   HttpHost: {
-    DEV: "http://192.168.5.199:9999",
-    RELEASE: "http://192.168.5.199:8888",
+    DEV: "http://192.168.5.199:9999", // 测试服
+    RELEASE: "http://192.168.5.199:8888", // 正式服
   },
   AdName: {
     BOTTOM: 'bottom',
