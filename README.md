@@ -1,5 +1,5 @@
 # bamboo框架使用示例
-本项目为bamboo框架的使用示例
+本项目为[bamboo](https://github.com/zhandouxiaojiji/bamboo)框架的使用示例
 
 ## 服务端示例
 + 服务端 https://github.com/zhandouxiaojiji/bewater-sample
