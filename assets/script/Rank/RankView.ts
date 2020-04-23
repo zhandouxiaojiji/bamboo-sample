@@ -7,9 +7,9 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class RankView extends cc.Component {
     @property(cc.Prefab)
-    itemPrefab: cc.Prefab;
+    itemPrefab: cc.Prefab = null;
     @property(cc.Node)
-    content: cc.Node;
+    content: cc.Node = null;
 
     itemList: RankItem[] = [];
 

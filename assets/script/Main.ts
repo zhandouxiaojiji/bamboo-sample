@@ -10,33 +10,33 @@ import Rank from "../bamboo/Service/Rank";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Main extends cc.Component {
 
     @property(cc.Node)
-    consoleBtn: cc.Node;
+    consoleBtn: cc.Node = null;
 
     @property(cc.Prefab)
-    consoleViewPrefab: cc.Prefab;
+    consoleViewPrefab: cc.Prefab = null;
 
     @property(cc.Prefab)
-    rankViewPrefab: cc.Prefab;
+    rankViewPrefab: cc.Prefab = null;
 
     onLoad () {
         Language.init(prop.language);
     }
 
     start () {
-        Network.init(def.HttpHost.RELEASE);
+        Network.init(def.HttpHost.RELEASE, def.WsHost.RELEASE);
         if(cc.sys.platform == cc.sys.WECHAT_GAME) {
             Wechat.init(def.Wechat.appId);
         }
 
-        ConsoleService.addCustom("切换到正式服", () => {
-            Network.setHost(def.HttpHost.RELEASE);
-        });
-        ConsoleService.addCustom("切换到测试服", () => {
-            Network.setHost(def.HttpHost.DEV);
-        });
+        // ConsoleService.addCustom("切换到正式服", () => {
+        //     Network.setHttpHost(def.HttpHost.RELEASE);
+        // });
+        // ConsoleService.addCustom("切换到测试服", () => {
+        //     Network.setHttpHost(def.HttpHost.DEV);
+        // });
         ConsoleService.addCustom("提交分数", () => {
             (async () => {
                 let resp = await Network.setKV(def.ScoreName, String(888), def.APPNAME);
@@ -52,6 +52,19 @@ export default class NewClass extends cc.Component {
                 }
             })();
         });
+        ConsoleService.addCustom("ws连接", () => {
+           Network.wsOpen();
+        });
+
+        ConsoleService.addCustom("ws心跳", () => {
+            (async () => {
+                var res = await Network.wsCall({
+                    name: "user.ping",
+                    defaultRes: {time: Date.now()}
+                });
+                console.log(res);
+            })();
+        })
     }
 
     // 测试登录
@@ -63,7 +76,7 @@ export default class NewClass extends cc.Component {
                 showConsole = true;
             } else {
                 await Network.login(def.APPNAME);
-                if (def.TestAccounts[Network.acc]) {
+                if (def.TestAccounts[Network.account]) {
                     showConsole = true;
                 }
             }

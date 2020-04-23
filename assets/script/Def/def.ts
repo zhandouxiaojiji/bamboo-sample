@@ -38,6 +38,10 @@ export default {
     DEV: "http://192.168.5.199:9999", // 测试服
     RELEASE: "http://192.168.5.199:8888", // 正式服
   },
+  WsHost: {
+    DEV: "ws://192.168.5.199:9990", // 测试服
+    RELEASE: "ws://192.168.5.199:8880", // 正式服
+  },
   AdName: {
     BOTTOM: 'bottom',
     GAMEOVER: 'gameover',
