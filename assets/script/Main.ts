@@ -56,13 +56,16 @@ export default class Main extends cc.Component {
            Network.wsOpen();
         });
 
-        ConsoleService.addCustom("ws心跳", () => {
+        ConsoleService.addCustom("ws发送协议", () => {
             (async () => {
                 var res = await Network.wsCall({
-                    name: "user.ping",
-                    defaultRes: {time: Date.now()}
+                    name: "test.hello",
+                    data: {
+                        text: "hello bewater"
+                    },
+                    defaultRes: {text: "cannot connect to server"}
                 });
-                console.log(res);
+                console.log("ping res", res);
             })();
         })
     }
