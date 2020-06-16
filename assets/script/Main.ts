@@ -6,6 +6,7 @@ import Wechat from "../bamboo/Wechat/Wechat";
 import ConsoleService from "../bamboo/Console/ConsoleService";
 import bb from "../bamboo/bb";
 import Rank from "../bamboo/Service/Rank";
+import {user} from "./Def/proto";
 
 const {ccclass, property} = cc._decorator;
 
@@ -39,7 +40,7 @@ export default class Main extends cc.Component {
         // });
         ConsoleService.addCustom("提交分数", () => {
             (async () => {
-                let resp = await Network.setKV(def.ScoreName, String(888), def.APPNAME);
+                let resp = await Network.setKV(def.ScoreName, String(888));
                 console.log("set kv", resp);
                 let userInfo = await Network.getUserInfo();
                 if (userInfo) {
@@ -67,7 +68,16 @@ export default class Main extends cc.Component {
                 });
                 console.log("ping res", res);
             })();
-        })
+        });
+
+        ConsoleService.addCustom("测试protobuf", () => {
+            console.log(user);
+            let msg = user.s2c_data.create({err: 1});
+            let buffer = user.s2c_data.encode(msg).finish();
+            console.log("encode", buffer);
+            let data: user.Is2c_data = user.s2c_data.decode(buffer);
+            console.log("decode", data);
+        });
     }
 
     // 测试登录

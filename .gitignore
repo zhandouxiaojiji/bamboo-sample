@@ -1,6 +1,7 @@
 local/
 library/
 temp/
+node_modules/
 
 build/jsb-link/frameworks/runtime-src/proj.ios_mac/GoogleMobileAds.framework/
 build/jsb-link/frameworks/runtime-src/proj.ios_mac/PluginAdMob.framework/
