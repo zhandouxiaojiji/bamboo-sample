@@ -1,4 +1,4 @@
-import def from "../Def/def";
+import Def from "../Def/Def";
 import Rank from "../../bamboo/Service/Rank";
 import RankItem from "./RankItem";
 
@@ -17,7 +17,7 @@ export default class RankView extends cc.Component {
         this.node.on(cc.Node.EventType.TOUCH_END, () => {
             this.node.removeFromParent();
         });
-        this.preload(def.MAX_RANK_COUNT);
+        this.preload(Def.MAX_RANK_COUNT);
         this.showRank();
     }
 
@@ -33,7 +33,7 @@ export default class RankView extends cc.Component {
 
     showRank() {
         (async () => {
-            const { list, mine } = await Rank.fetch(def.ScoreName, def.APPNAME);
+            const { list, mine } = await Rank.fetch(Def.ScoreName, Def.APPNAME);
             const itemList = this.itemList;
             if (!itemList) {
                 return;
